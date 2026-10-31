@@ -12,3 +12,6 @@
 @media(max-width:375px){.envelope-scene{width:92%;margin-top:9vh}.envelope{height:210px}.seal{width:76px;height:76px}}
 
 .trail-svg{position:absolute!important;inset:0;width:100%;height:100%;z-index:0!important;pointer-events:none;color:#a66b64;opacity:.32;overflow:hidden}.trail-svg.reverse{transform:scaleX(-1)}.trail-step{transition:none}@media(prefers-reduced-motion:reduce){.trail-svg{display:none}}
+
+/* One uninterrupted path spans every chapter; only the current step is dark. */
+.trail-svg{position:absolute!important;top:0;left:0;width:100%;height:100%;z-index:1!important;color:#a66b64;opacity:1;pointer-events:none;overflow:hidden}.trail-line{stroke:#a66b64;stroke-width:1.1;opacity:.24}.trail-step{fill:#a66b64}.trail-step.current{fill:#582b35}.chapter>*{z-index:2}@media(prefers-reduced-motion:reduce){.trail-svg{display:none}}
