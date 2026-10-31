@@ -30,3 +30,6 @@
 .reference-frame{width:min(100%,calc(100dvh * .7143));aspect-ratio:1060/1484;perspective:1400px;transform-style:preserve-3d}.card-background{z-index:0}.invitation-reveal{z-index:1;left:22.5%;right:21.1%;top:7.2%;height:85.8%;opacity:1;gap:18px}.invitation-reveal strong{font-size:clamp(27px,8vw,42px)}.gate{position:absolute;inset:0;z-index:2;transform-style:preserve-3d;backface-visibility:hidden;pointer-events:none}.gate-left{clip-path:polygon(22.7% 7%,52.7% 7%,53% 93%,22.3% 93%);transform-origin:22.7% 50%}.gate-right{clip-path:polygon(52.6% 7%,78.2% 7.5%,79% 92.5%,52.8% 93%);transform-origin:78.5% 50%}.seal-image{position:absolute;inset:0;z-index:3;clip-path:ellipse(9.6% 7.7% at 50.8% 48.7%);transform-origin:50.8% 48.7%;pointer-events:none}.reference-seal{left:50.8%;top:48.7%;width:19%;height:15%;border-radius:50%;z-index:4;color:transparent;text-shadow:none}.reference-seal:focus-visible{outline:2px solid #f1c77d;outline-offset:4px}
 
 .photo-opening{height:100dvh;min-height:100dvh;background:#140d0a}.gate,.seal-image,.invitation-reveal{visibility:visible}
+
+/* A single dashed guide sweeps continuously across the invitation. */
+.trail-line{stroke:#a68d6c;stroke-width:1.2;stroke-dasharray:5 6;opacity:.32}.trail-cursor{fill:#582b35}.trail-step{fill:#a66b64}
