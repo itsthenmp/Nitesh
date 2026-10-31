@@ -33,3 +33,6 @@
 
 /* A single dashed guide sweeps continuously across the invitation. */
 .trail-line{stroke:#a68d6c;stroke-width:1.2;stroke-dasharray:5 6;opacity:.32}.trail-cursor{fill:#582b35}.trail-step{fill:#a66b64}
+
+/* Keep each family's introduction close to their child. */
+.welcome-copy .family-intro{margin:26px auto 0;color:#9b8274;font:italic 17px/1.5 'Cormorant Garamond',serif}.welcome-copy .family-intro span{font:500 10px/1.7 Manrope,sans-serif;letter-spacing:.04em;color:#79695f}.welcome-copy h1{margin:16px 0 12px}.welcome-copy .groom-family{margin:0 auto 26px}.welcome-copy .date{margin-bottom:32px}
