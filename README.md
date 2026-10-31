@@ -1,13 +1,14 @@
 # A celebration of love
 
-A mobile-first wedding invitation built with Next.js App Router, TypeScript, Tailwind CSS, GSAP and Lucide. It exports to GitHub Pages. Wedding details and photographs are placeholders until you edit `lib/config.ts`.
+A mobile-first wedding invitation built with Next.js App Router, TypeScript, Tailwind CSS, GSAP and Lucide. It exports to GitHub Pages. The content is configured in `lib/config.ts`; the couple photograph remains an editable placeholder.
 
 ## Personalize
 
 1. Edit `lib/config.ts`: couple and parents' names, quotes, story, quiz prompts, events, venue names and exact Google Maps links. Leave unknown values empty; they are shown as “to be announced.” Do not put credentials in this file.
 2. Put photographs in `public/photos/` and set their paths in the configuration, e.g. `/photos/couple.jpg`. Use your own optimized images; the interface shows labeled placeholders while paths are empty.
 3. Enter each date as `YYYY-MM-DD` and each start and end time as `HH:mm` in 24-hour local time. End time is optional; if supplied, it must be later than start on the same day. With no end time, Apple entries omit the end and Google entries begin with a zero duration that guests can adjust. Overnight events should be adjusted before use. The default timezone is Asia/Kolkata. Calendar downloads use that configured timezone. Countdown currently assumes Asia/Kolkata.
-4. Quiz mode is intentionally non-scoring: guests make playful guesses without presenting them as facts.
+4. The quiz uses the couple-provided answers in `lib/config.ts`. Set an answer to `null` to return to unscored demo mode. The comic panels are generated illustrations and can be replaced in the same configuration.
+5. Sephora & Hayden and Tropical Avenue are loaded from a third-party font host and are described by their creators as free for personal use; review their terms before any commercial use.
 
 ## Run locally
 

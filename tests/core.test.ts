@@ -7,3 +7,7 @@ test('configuration contains exactly the three celebrations',()=>assert.deepEqua
 test('RSVP validation accepts valid input and rejects spam and missing event',()=>{const v={name:'A Guest',attendance:'yes',guests:2,events:['wedding'],dietary:'',message:'',website:''};assert.equal(rsvpSchema.safeParse(v).success,true);assert.equal(rsvpSchema.safeParse({...v,website:'spam'}).success,false);assert.equal(rsvpSchema.safeParse({...v,events:[]}).success,false)});
 
 test('events without an end time remain usable without inventing one',()=>{const e={...event,end:''};assert.equal(ready(e),true);assert.doesNotMatch(ics([e],'Asia/Kolkata','day'),/DTEND/);assert.match(new URL(googleUrl(e,'Asia/Kolkata')).searchParams.get('dates')!,/20271212T100000\/20271212T100000/)});
+
+import { formatTime } from '../lib/time';
+test('guest times use 12-hour notation',()=>{assert.equal(formatTime('17:00'),'5:00 PM');assert.equal(formatTime('18:00'),'6:00 PM');assert.equal(formatTime('00:05'),'12:05 AM');assert.equal(formatTime('12:30'),'12:30 PM')});
+test('couple quiz contains the four supplied answers',()=>assert.deepEqual(wedding.quiz.map(q=>q.answer),['groom','bride','bride','both']));
