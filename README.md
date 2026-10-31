@@ -29,7 +29,7 @@ Visit http://localhost:3000. Run `npm test` and `npm run build` to verify. The e
 
 ## Private RSVP storage
 
-GitHub Pages only serves static files, so it cannot receive or store responses. This project includes a separate Vercel serverless endpoint under `server/` and uses a PostgreSQL database reachable over HTTP via Neon. Until configured, the form reports that RSVP is unavailable; it never pretends to save a submission.
+GitHub Pages only serves static files, so it cannot receive or store responses. This project includes a separate Vercel serverless endpoint under `server/` and uses a PostgreSQL database reachable over HTTP via Neon. The RSVP form is currently removed from the invitation; the optional endpoint remains in the source if you choose to restore it later.
 
 1. Create a Neon PostgreSQL database and run `server/schema.sql` using its SQL editor. Keep database credentials private. Review database access and backups with your provider.
 2. Import the same GitHub repository into Vercel as a **separate project**, set its Root Directory to `server`, and deploy. Set environment variables `DATABASE_URL`, `ALLOWED_ORIGIN` (exact origin, e.g. `https://username.github.io`, without a trailing slash or repository path), and `RATE_LIMIT_SECRET` (a long random secret). Redeploy after changing them. The endpoint will be `https://YOUR-PROJECT.vercel.app/api/rsvp`.
