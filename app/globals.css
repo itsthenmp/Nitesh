@@ -38,3 +38,6 @@
 .welcome-copy .family-intro{margin:26px auto 0;color:#9b8274;font:italic 17px/1.5 'Cormorant Garamond',serif}.welcome-copy .family-intro span{font:500 10px/1.7 Manrope,sans-serif;letter-spacing:.04em;color:#79695f}.welcome-copy h1{margin:16px 0 12px}.welcome-copy .groom-family{margin:0 auto 26px}.welcome-copy .date{margin-bottom:32px}
 /* Let the scratch card reach both edges of the invitation. */
 .countdown-block{margin-left:-35px;margin-right:-35px}.scratch-wrap{max-width:none;width:100%}@media(max-width:375px){.countdown-block{margin-left:-25px;margin-right:-25px}}
+
+/* Replaceable editorial images for the three celebrations. */
+.event-art{position:relative;height:220px;overflow:hidden}.event-art img{object-position:center}
