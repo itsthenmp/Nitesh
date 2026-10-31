@@ -1,0 +1,1 @@
+Place your original photographs here. Set their paths in lib/config.ts, for example `/photos/couple.jpg`. Images should be sized for the web and shared with permission. Empty paths display an intentional placeholder.
