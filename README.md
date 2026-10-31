@@ -6,7 +6,7 @@ A mobile-first wedding invitation built with Next.js App Router, TypeScript, Tai
 
 1. Edit `lib/config.ts`: couple and parents' names, quotes, story, quiz prompts, events, venue names and exact Google Maps links. Leave unknown values empty; they are shown as “to be announced.” Do not put credentials in this file.
 2. Put photographs in `public/photos/` and set their paths in the configuration, e.g. `/photos/couple.jpg`. Use your own optimized images; the interface shows labeled placeholders while paths are empty.
-3. Enter each date as `YYYY-MM-DD` and each start and end time as `HH:mm` in 24-hour local time. End must be later than start on the same day. Overnight events should be adjusted before use. The default timezone is Asia/Kolkata. Calendar downloads use that configured timezone. Countdown currently assumes Asia/Kolkata.
+3. Enter each date as `YYYY-MM-DD` and each start and end time as `HH:mm` in 24-hour local time. End time is optional; if supplied, it must be later than start on the same day. With no end time, Apple entries omit the end and Google entries begin with a zero duration that guests can adjust. Overnight events should be adjusted before use. The default timezone is Asia/Kolkata. Calendar downloads use that configured timezone. Countdown currently assumes Asia/Kolkata.
 4. Quiz mode is intentionally non-scoring: guests make playful guesses without presenting them as facts.
 
 ## Run locally
@@ -42,4 +42,4 @@ For a Next.js deployment on Vercel, deploy the static root project as one Vercel
 
 ## Calendar and accessibility
 
-An .ics file contains selected events and VALARM reminders; guests must open and save it in a compatible calendar application. Google Calendar opens one prefilled event at a time; guests set reminders and save in Google. No reminder is claimed as created before that confirmation. Missing or invalid event times disable calendar selection. The opening has a skip control, motion respects the operating-system preference, and modal sheets support Escape and keyboard focus containment.
+An .ics file contains selected events and VALARM reminders; guests must open and save it in a compatible calendar application. Google Calendar opens one prefilled event at a time; guests set reminders and save in Google. No reminder is claimed as created before that confirmation. Missing or invalid start times disable calendar selection. The opening has a skip control, motion respects the operating-system preference, and modal sheets support Escape and keyboard focus containment.

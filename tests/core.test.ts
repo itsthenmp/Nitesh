@@ -5,3 +5,5 @@ test('calendar escapes and includes selected alarms',()=>{const value=ics([event
 test('Google URL and incomplete event',()=>{assert.equal(ready({...event,start:''}),false);assert.equal(new URL(googleUrl(event,'Asia/Kolkata')).searchParams.get('ctz'),'Asia/Kolkata')});
 test('configuration contains exactly the three celebrations',()=>assert.deepEqual(wedding.events.map(e=>e.id),['haldi','wedding','reception']));
 test('RSVP validation accepts valid input and rejects spam and missing event',()=>{const v={name:'A Guest',attendance:'yes',guests:2,events:['wedding'],dietary:'',message:'',website:''};assert.equal(rsvpSchema.safeParse(v).success,true);assert.equal(rsvpSchema.safeParse({...v,website:'spam'}).success,false);assert.equal(rsvpSchema.safeParse({...v,events:[]}).success,false)});
+
+test('events without an end time remain usable without inventing one',()=>{const e={...event,end:''};assert.equal(ready(e),true);assert.doesNotMatch(ics([e],'Asia/Kolkata','day'),/DTEND/);assert.match(new URL(googleUrl(e,'Asia/Kolkata')).searchParams.get('dates')!,/20271212T100000\/20271212T100000/)});
