@@ -193,3 +193,6 @@ body .welcome-copy h1,body .welcome-copy h1 *,body .save-date-names,body .invita
 .comic-dialogue .speech{font-size:14px;line-height:1.35;overflow-wrap:break-word}
 
 .comic-dialogue .speech,.comic-dialogue .speech-1{border-radius:999px;padding:12px 18px}
+
+/* Fill the opening viewport with the wooden backdrop. */
+.reference-opening{overflow:hidden}.reference-frame{width:max(100%,calc(100dvh * .7143));flex:none}
