@@ -109,3 +109,10 @@ body .event-content h3.event-title { color: #81530e; font-size: clamp(38px, 10vw
 .sheet h2 strong{font-weight:700}
 
 .sheet h2.quiz-title{font-size:clamp(19px,5vw,29px);white-space:nowrap;letter-spacing:-.025em}
+
+/* Keep long chapter headings inside the invitation and give descenders room. */
+.section-heading h2{line-height:1.14}
+.celebrations .section-heading h2{font-size:clamp(32px,10vw,54px);line-height:1.14;overflow-wrap:normal}
+.guide-note{padding-top:48px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.guide-note .flower{display:block;margin:0 auto}
+.guide-note p{max-width:100%;margin:12px auto 0}
