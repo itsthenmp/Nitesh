@@ -73,3 +73,15 @@ body .save-date-names{font-family:'Sephora Hayden','Great Vibes',cursive!importa
 .route-start{width:32px;padding:0;border-radius:50%;font-size:12px!important}
 .guide-row .eyebrow{font-size:clamp(13px,3.2vw,15px);font-weight:700;letter-spacing:.08em;color:#582b35}
 .back-to-top{position:fixed;z-index:10;right:max(14px,calc((100vw - 540px)/2 + 14px));bottom:max(27px,calc(env(safe-area-inset-bottom) + 7px));width:46px;height:46px;display:grid;place-items:center;border:1px solid #c4a477;border-radius:50%;background:#f9f1e5;color:#582b35;box-shadow:0 5px 15px #50302a1a;transition:transform .2s}.back-to-top:active{transform:scale(.92)}
+
+/* Translucent jewel-toned chapters retain the patterned editorial paper. */
+main { background: #f2eaf5; }
+.welcome.chapter { background: linear-gradient(145deg, rgba(228, 139, 160, .25), rgba(200, 170, 222, .24)), #f8edf4; }
+.story.chapter { background: linear-gradient(155deg, rgba(141, 166, 221, .25), rgba(182, 139, 208, .24)), #edf0fa; }
+.celebrations.chapter { background: linear-gradient(145deg, rgba(216, 124, 148, .23), rgba(173, 139, 210, .23)), #f8eef6; }
+.guide.chapter { background: linear-gradient(150deg, rgba(130, 162, 218, .25), rgba(189, 143, 209, .23)), #eef0fa; }
+.sheet, .scratch-popup { background: #f5eaf6; }
+body :where(p, small, label, button, a, .eyebrow, .section-index, .topline, .hero-caption, .event-top, .closing-small, .quiz-count, .family-intro, .event-details, .route-legend, .countdown span):not(.save-date-names) { font-weight: 700 !important; }
+body :where(.section-heading h2, .section-heading h2 em, .guide-row h3, .route-heading h3) { font-weight: 700 !important; }
+body :where(.section-heading p, .guide-row p, .family-intro, .event-details, .sheet > p, .small-note) { color: #584050 !important; }
+.photo-opening { cursor: pointer; }

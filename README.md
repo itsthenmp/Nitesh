@@ -44,3 +44,9 @@ For a Next.js deployment on Vercel, deploy the static root project as one Vercel
 ## Calendar and accessibility
 
 An .ics file contains selected events and VALARM reminders; guests must open and save it in a compatible calendar application. Google Calendar opens one prefilled event at a time; guests set reminders and save in Google. No reminder is claimed as created before that confirmation. Missing or invalid start times disable calendar selection. The opening has a skip control, motion respects the operating-system preference, and modal sheets support Escape and keyboard focus containment.
+
+## Opening photo from Google Drive
+
+Set `photos.heroDriveLink` in `lib/config.ts` to a Google Drive file or folder sharing link, and set the image or folder to **Anyone with the link**. A file link displays that photo. A folder link randomly selects one image on each page load (images in the folder itself, not subfolders). Public file links work without an API key.
+
+For a folder, enable the Google Drive API in Google Cloud and create an API key restricted to the Drive API and the website's HTTP referrer. Set the GitHub Actions repository variable `NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY` to the key and redeploy. The key is public in the built website, so never use a secret key or one with unrestricted permissions. For local development set it in `.env.local`. If the link, permissions, key, or network is unavailable, the existing configured photo or placeholder is shown. Only share photos intended for public viewing.

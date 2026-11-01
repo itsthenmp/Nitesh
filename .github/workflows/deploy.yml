@@ -24,6 +24,7 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH || '/reception' }}
           NEXT_PUBLIC_RSVP_ENDPOINT: ${{ vars.NEXT_PUBLIC_RSVP_ENDPOINT }}
+          NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY: ${{ vars.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

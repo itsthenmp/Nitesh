@@ -6,7 +6,7 @@ export const wedding = {
   brideMother: 'Anindita Sengupta', brideFather: 'Sudip Sengupta', groomMother: 'Sumita Mehera', groomFather: 'Apurbendu Mehera', groomSibling: 'Amrita Mehera Maity',
   timezone: 'Asia/Kolkata',
   routeMap: '/photos/ruby-route.jpg', routeStart: 'Ruby General Hospital',
-  photos: { hero: '', story1: '/photos/story-trek-us.jpg', story2: '/photos/story-cooking-us.jpg', story3: '/photos/story-mountain-us.jpg' },
+  photos: { hero: '', heroDriveLink: 'https://drive.google.com/drive/folders/1yPqNa7F5y8LqtY2kMolfGJ9GdubVIccT?usp=sharing', story1: '/photos/story-trek-us.jpg', story2: '/photos/story-cooking-us.jpg', story3: '/photos/story-mountain-us.jpg' },
   quotes: { guide: 'The joy of this day is brighter because you are part of it.', welcome: 'In all the little moments, we found our forever.', story: 'A thousand ordinary days, made extraordinary together.', closing: 'The best part of our story is sharing it with you.' },
   story: [ { title: 'The trek', image: '/photos/story-trek-us.jpg', alt: 'A wife encourages her husband to go trekking as he holds a teapot.', dialogue: ['I want to stay back and make tea.', 'Let’s go trekking!'] }, { title: 'In the kitchen', image: '/photos/story-cooking-us.jpg', alt: 'A wife cooks in the kitchen while her husband watches.', dialogue: ['You are a good learner, you will learn quickly.', "Can’t we order?"] }, { title: 'A view together', image: '/photos/story-mountain-us.jpg', alt: 'A couple sit together at a mountain viewpoint looking toward Kanchenjunga.', dialogue: [] as string[] } ],
   events: [
