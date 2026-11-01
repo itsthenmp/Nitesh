@@ -11,8 +11,8 @@ export const wedding = {
   story: [ { title: 'The trek', image: '/photos/story-trek-us.jpg', alt: 'A wife encourages her husband to go trekking as he holds a teapot.', dialogue: ['I want to stay back and make tea.', 'Let’s go trekking!'] }, { title: 'In the kitchen', image: '/photos/story-cooking-us.jpg', alt: 'A wife cooks in the kitchen while her husband watches.', dialogue: ['You are a good learner, you will learn quickly.', "Can’t we order?"] }, { title: 'A view together', image: '/photos/story-mountain-us.jpg', alt: 'A couple sit together at a mountain viewpoint looking toward Kanchenjunga.', dialogue: [] as string[] } ],
   events: [
     { id:'haldi', name:'Haldi', image:'/photos/haldi-placeholder.jpg', date:'2027-02-14', start:'', end:'', venue:'', mapUrl:'', description:'A little sunshine, laughter and love.' },
-    { id:'wedding', name:'Wedding', image:'/photos/wedding-placeholder.jpg', date:'2027-02-14', start:'17:00', end:'', venue:'JMS VILLA', mapUrl:'https://maps.app.goo.gl/7BycH3Q7AAzmRYbZ6', description:'The moment we say forever.' },
-    { id:'reception', name:'Wedding Reception', image:'/photos/reception-placeholder.jpg', date:'2027-02-17', start:'18:00', end:'', venue:'Urban Fiesta Club', mapUrl:'https://maps.app.goo.gl/e8UtbWg3sYcPLvEMA', description:'An evening of togetherness and celebration.' },
+    { id:'wedding', name:'Haldi & Wedding', image:'/photos/wedding-mandap.webp', date:'2027-02-14', start:'17:00', end:'', venue:'JMS VILLA', mapUrl:'https://maps.app.goo.gl/7BycH3Q7AAzmRYbZ6', description:'The moment we say forever.' },
+    { id:'reception', name:'Wedding Reception', image:'/photos/reception-stage.webp', date:'2027-02-17', start:'18:00', end:'', venue:'Urban Fiesta Club', mapUrl:'https://maps.app.goo.gl/e8UtbWg3sYcPLvEMA', description:'An evening of togetherness and celebration.' },
   ] as WeddingEvent[],
   quiz: [
     { question: 'Who can cook good food?', answer: 'groom' },
