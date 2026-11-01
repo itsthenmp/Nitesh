@@ -5,6 +5,7 @@ export const wedding = {
   bride: 'Sudipta', groom: 'Nitesh',
   brideMother: 'Anindita Sengupta', brideFather: 'Sudip Sengupta', groomMother: 'Sumita Mehera', groomFather: 'Apurbendu Mehera', groomSibling: 'Amrita Mehera Maity',
   timezone: 'Asia/Kolkata',
+  outfits: { wedding: 'Ethnic Indian themed', reception: 'Indo western themed' },
   routeMap: '/photos/ruby-route.jpg', routeStart: 'Ruby General Hospital',
   photos: { hero: '', heroDriveLink: 'https://drive.google.com/drive/folders/1yPqNa7F5y8LqtY2kMolfGJ9GdubVIccT?usp=sharing', story1: '/photos/story-trek-us.jpg', story2: '/photos/story-cooking-us.jpg', story3: '/photos/story-mountain-us.jpg' },
   quotes: { guide: 'The joy of this day is brighter because you are part of it.', welcome: 'In all the little moments, we found our forever.', story: 'A thousand ordinary days, made extraordinary together.', closing: 'The best part of our story is sharing it with you.' },
