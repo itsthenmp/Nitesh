@@ -196,3 +196,7 @@ body .welcome-copy h1,body .welcome-copy h1 *,body .save-date-names,body .invita
 
 /* Fill the opening viewport with the wooden backdrop. */
 .reference-opening{overflow:hidden}.reference-frame{width:max(100%,calc(100dvh * .7143));flex:none}
+
+/* Turn the paired footsteps with the scrolling direction. */
+.trail-step[data-direction="down"] > *,.trail-cursor[data-direction="down"] > *{transform:rotate(180deg);transform-origin:0 0}
+.footer-credit{margin:18px auto 0;color:#efd2bb;font-size:12px;line-height:1.5;text-align:center}
