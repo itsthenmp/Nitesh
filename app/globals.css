@@ -85,3 +85,11 @@ body :where(p, small, label, button, a, .eyebrow, .section-index, .topline, .her
 body :where(.section-heading h2, .section-heading h2 em, .guide-row h3, .route-heading h3) { font-weight: 700 !important; }
 body :where(.section-heading p, .guide-row p, .family-intro, .event-details, .sheet > p, .small-note) { color: #584050 !important; }
 .photo-opening { cursor: pointer; }
+/* Fine metallic-inspired Indian motifs, alternating gold and silver by chapter. */
+.welcome.chapter:before,.celebrations.chapter:before,.story.chapter:before,.guide.chapter:before,.save-date:before {
+ background-size: 150px 150px;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23b18b56' stroke-width='1'%3E%3Cpath d='M75 16 C67 31 56 41 75 58 C94 41 83 31 75 16Z M75 134 C67 119 56 109 75 92 C94 109 83 119 75 134Z M16 75 C31 67 41 56 58 75 C41 94 31 83 16 75Z M134 75 C119 67 109 56 92 75 C109 94 119 83 134 75Z M0 0 Q24 10 28 28 Q10 24 0 0 M150 0 Q126 10 122 28 Q140 24 150 0 M0 150 Q24 140 28 122 Q10 126 0 150 M150 150 Q126 140 122 122 Q140 126 150 150'/%3E%3Ccircle cx='75' cy='75' r='8'/%3E%3Ccircle cx='75' cy='75' r='3'/%3E%3C/g%3E%3C/svg%3E");
+ opacity:.19;
+}
+.story.chapter:before,.guide.chapter:before { filter: grayscale(1); opacity:.16; }
+.save-date:before { opacity:.28; }
