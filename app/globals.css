@@ -93,3 +93,11 @@ body :where(.section-heading p, .guide-row p, .family-intro, .event-details, .sh
 }
 .story.chapter:before,.guide.chapter:before { filter: grayscale(1); opacity:.16; }
 .save-date:before { opacity:.28; }
+
+/* Handwritten event titles reveal as guests scroll, with a warm gold shimmer. */
+@font-face { font-family: Astoria; src: url('../public/fonts/astoria.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+body .event-content h3.event-title, body .event-content h3.event-title * { font-family: Astoria, cursive !important; }
+body .event-content h3.event-title { color: #81530e; font-size: clamp(38px, 10vw, 52px); line-height: 1.2; overflow-wrap: anywhere; animation: event-gold-glow 3s ease-in-out infinite alternate; }
+.event-title-letter { white-space: pre-wrap; }
+@keyframes event-gold-glow { from { text-shadow: 0 0 2px rgba(177, 139, 86, .18); } to { text-shadow: 0 0 9px rgba(177, 139, 86, .6), 0 0 18px rgba(205, 158, 70, .28); } }
+@media (prefers-reduced-motion: reduce) { body .event-content h3.event-title { animation: none; } }
