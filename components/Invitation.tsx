@@ -8,17 +8,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { wedding, type WeddingEvent, type QuizChoice } from '@/lib/config';
 import { googleUrl, ics, ready, type Reminder } from '@/lib/calendar';
 import { formatTime } from '@/lib/time';
-import { drivePhotoUrl, parseDriveLink } from '@/lib/drive';
+import { drivePhotoUrl } from '@/lib/drive';
 
 type Sheet='calendar'|'quiz'|null;
 const base=process.env.NEXT_PUBLIC_BASE_PATH || '';
 function Photo({src, label, className=''}:{src:string;label:string;className?:string}) { return <div className={`photo ${className}`}>{src ? <Image src={`${base}${src}`} alt={label} fill sizes="(max-width: 600px) 90vw, 500px" style={{objectFit:'cover'}}/> : <div className="photo-placeholder"><span>YOUR PHOTOGRAPH HERE</span><small>Replace in the content configuration</small></div>}</div> }
 function HeroPhoto(){
  const [url,setUrl]=useState('');
- useEffect(()=>{const drive=parseDriveLink(wedding.photos.heroDriveLink);if(!drive)return;let cancelled=false;
-  if(drive.kind==='file'){setUrl(drivePhotoUrl(drive.id));return}
-  const key=process.env.NEXT_PUBLIC_GOOGLE_DRIVE_API_KEY;if(!key)return;
-  (async()=>{try{let token='';const ids:string[]=[];do{const params=new URLSearchParams({key,q:`'${drive.id}' in parents and trashed = false and mimeType contains 'image/'`,fields:'nextPageToken,files(id)',pageSize:'1000'});if(token)params.set('pageToken',token);const response=await fetch(`https://www.googleapis.com/drive/v3/files?${params}`);if(!response.ok)throw new Error('Unable to load Drive folder');const data: {files?: {id:string}[];nextPageToken?:string}=await response.json();ids.push(...(data.files||[]).map(file=>file.id));token=data.nextPageToken||''}while(token);if(!cancelled&&ids.length)setUrl(drivePhotoUrl(ids[Math.floor(Math.random()*ids.length)]))}catch{/* Keep the placeholder if Drive is unavailable. */}})();return()=>{cancelled=true}
+ useEffect(()=>{let cancelled=false;
+  fetch(`${base}/drive-photos.json`,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('Photo list unavailable');return response.json()}).then((data:{photos?:string[]})=>{const ids=(data.photos||[]).filter(id=>/^[\w-]+$/.test(id));if(!cancelled&&ids.length)setUrl(drivePhotoUrl(ids[Math.floor(Math.random()*ids.length)]))}).catch(()=>{});
+  return()=>{cancelled=true};
  },[]);
  return url?<div className="photo hero-photo"><Image src={url} alt="The couple" fill unoptimized sizes="(max-width: 600px) 90vw, 500px" style={{objectFit:'cover'}} onError={()=>setUrl('')}/></div>:<Photo src={wedding.photos.hero} label="The couple" className="hero-photo"/>;
 }
