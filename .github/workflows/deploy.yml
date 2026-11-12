@@ -25,7 +25,7 @@ jobs:
       - run: npm test
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH || '/reception' }}
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH || '/Nitesh' }}
           NEXT_PUBLIC_RSVP_ENDPOINT: ${{ vars.NEXT_PUBLIC_RSVP_ENDPOINT }}
       - uses: actions/upload-pages-artifact@v3
         with:
