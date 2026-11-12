@@ -246,3 +246,7 @@ body .contact.chapter .section-heading p{color:#f0d9ce!important}
 .contact-links a{background:#39233a;border-color:#b18b56;color:#fff1e4}
 .contact-links a:hover,.contact-links a:focus-visible{background:#4a2e46}
 .contact-closing{color:#e8bfad}
+/* Keep the new story title on two deliberate lines. */
+.story .section-heading .story-title{font-size:clamp(40px,12vw,64px)}
+.story .section-heading .story-title span,.story .section-heading .story-title em{display:block;white-space:nowrap}
+.story .section-heading .story-title em{font-size:calc(1em - 2px)}
