@@ -40,7 +40,7 @@ function ScratchCountdown(){
 }
 export default function Invitation(){
  const [opened,setOpened]=useState(false),[opening,setOpening]=useState(false),[sheet,setSheet]=useState<Sheet>(null),[keyboard,setKeyboard]=useState(false),[outfitExpanded,setOutfitExpanded]=useState(false),[showBackToTop,setShowBackToTop]=useState(false);const envelope=useRef<HTMLDivElement>(null);const main=useRef<HTMLElement>(null);const triggerRef=useRef<HTMLButtonElement|null>(null);
- useEffect(()=>{if(!opened){setShowBackToTop(false);return}const update=()=>{const story=document.getElementById('story');setShowBackToTop(!!story&&window.scrollY>=story.offsetTop-20)};update();window.addEventListener('scroll',update,{passive:true});return()=>window.removeEventListener('scroll',update)},[opened]);
+ useEffect(()=>{if(!opened){setShowBackToTop(false);return}const update=()=>{setShowBackToTop(window.scrollY>120)};update();window.addEventListener('scroll',update,{passive:true});return()=>window.removeEventListener('scroll',update)},[opened]);
  useEffect(()=>{if(!outfitExpanded)return;const dismiss=(event:PointerEvent)=>{if(!(event.target instanceof Element)||!event.target.closest('.outfit-tab'))setOutfitExpanded(false)};document.addEventListener('pointerdown',dismiss);return()=>document.removeEventListener('pointerdown',dismiss)},[outfitExpanded]);
  useEffect(()=>{if(!outfitExpanded||sheet)return;const timer=window.setTimeout(()=>setOutfitExpanded(false),5000);return()=>window.clearTimeout(timer)},[outfitExpanded,sheet]);
  useEffect(()=>{const viewport=window.visualViewport;const update=()=>setKeyboard(!!viewport && window.innerHeight-viewport.height>150);viewport?.addEventListener('resize',update);return()=>viewport?.removeEventListener('resize',update)},[]);
