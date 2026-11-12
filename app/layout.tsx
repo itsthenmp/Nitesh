@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-const shareImage = 'https://itsthenmp.github.io/Nitesh/photos/reception-share.png';
+const shareImage = 'https://itsthenmp.github.io/Nitesh/photos/reception-share-v2.jpg';
 export const metadata: Metadata = {
   title: 'Nitesh & Sudipta | Reception',
   description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: 'https://itsthenmp.github.io/Nitesh/',
     title: 'Nitesh & Sudipta | Reception',
     description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
-    images: [{ url: shareImage, width: 1734, height: 907, alt: 'Reception Invite in gold on a burgundy card' }],
+    images: [{ url: shareImage, width: 1200, height: 627, type: 'image/jpeg', alt: 'Reception Invite in gold on a burgundy card' }],
   },
   twitter: { card: 'summary_large_image', images: [shareImage] },
 };
