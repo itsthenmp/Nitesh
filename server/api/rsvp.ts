@@ -2,7 +2,7 @@ import type { VercelRequest,VercelResponse } from '@vercel/node';
 import { neon } from '@neondatabase/serverless';
 import { z } from 'zod';
 import { createHash } from 'node:crypto';
-const schema=z.object({name:z.string().trim().min(2).max(100),attendance:z.enum(['yes','no']),guests:z.number().int().min(1).max(10),events:z.array(z.enum(['haldi','wedding','reception'])).max(3),dietary:z.string().max(500),message:z.string().max(1000),website:z.string().max(0)}).refine(v=>v.attendance==='no'||v.events.length>0);
+const schema=z.object({name:z.string().trim().min(2).max(100),attendance:z.enum(['yes','no']),guests:z.number().int().min(1).max(10),events:z.array(z.enum(['reception'])).max(1),dietary:z.string().max(500),message:z.string().max(1000),website:z.string().max(0)}).refine(v=>v.attendance==='no'||v.events.length>0);
 export default async function handler(req:VercelRequest,res:VercelResponse){
  const origin=req.headers.origin;const allowed=process.env.ALLOWED_ORIGIN;
  if(origin&&origin===allowed){res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');res.setHeader('Access-Control-Allow-Methods','POST, OPTIONS');res.setHeader('Access-Control-Allow-Headers','Content-Type');}
