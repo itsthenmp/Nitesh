@@ -250,3 +250,5 @@ body .contact.chapter .section-heading p{color:#f0d9ce!important}
 .story .section-heading .story-title{font-size:clamp(40px,12vw,64px)}
 .story .section-heading .story-title span,.story .section-heading .story-title em{display:block;white-space:nowrap}
 .story .section-heading .story-title em{font-size:calc(1em - 2px)}
+
+.welcome-introduction .welcome-events{color:#f0c95d}
