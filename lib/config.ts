@@ -5,7 +5,7 @@ export const invite = {
   bride: 'Sudipta', groom: 'Nitesh',
   brideMother: 'Anindita Sengupta', brideFather: 'Sudip Sengupta', groomMother: 'Sumita Mehera', groomFather: 'Apurbendu Mehera', groomSibling: 'Amrita Mehera Maity',
   timezone: 'Asia/Kolkata',
-  contacts: [{ display: '9582636929', phone: '+919582636929' }, { display: '+91 98306 33343', phone: '+919830633343' }, { display: '81453 87727', phone: '+918145387727' }],
+  contacts: [{ display: '9582636929', phone: '+919582636929' }, { display: '9830633343', phone: '+919830633343' }, { display: '8145387727', phone: '+918145387727' }],
   outfits: { reception: 'Indo western themed' },
   routeMap: '/photos/reception-route.png', routeStart: 'Ruby General Hospital',
   photos: { hero: '', heroDriveLink: 'https://drive.google.com/drive/folders/1yPqNa7F5y8LqtY2kMolfGJ9GdubVIccT?usp=sharing', story1: '/photos/story-trek-us.jpg', story2: '/photos/story-cooking-us.jpg', story3: '/photos/story-mountain-us.jpg' },
