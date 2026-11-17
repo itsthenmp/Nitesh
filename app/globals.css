@@ -248,8 +248,6 @@ body .contact.chapter .section-heading p{color:#f0d9ce!important}
 .contact-closing{color:#e8bfad}
 /* Keep the new story title on two deliberate lines. */
 .story .section-heading .story-title{font-size:clamp(40px,12vw,64px)}
-.story .section-heading .story-title span,.story .section-heading .story-title em{display:block;white-space:nowrap}
-.story .section-heading .story-title em{font-size:calc(1em - 2px)}
 
 
 .floating-nav-group {
@@ -310,7 +308,8 @@ body .welcome-introduction .welcome-events {
   line-height: 0;
 }
 
-.story .section-heading h2 > * {
+#story .section-heading .story-title > span,
+#story .section-heading .story-title > em {
   display: none;
 }
 
