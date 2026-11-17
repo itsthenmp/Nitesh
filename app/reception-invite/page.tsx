@@ -5,7 +5,7 @@ const url = 'https://itsthenmp.github.io/Nitesh/reception-invite/';
 const image = 'https://itsthenmp.github.io/Nitesh/photos/reception-share-v2.jpg';
 
 export const metadata: Metadata = {
-  title: 'Nitesh & Sudipta | Reception Invite',
+  title: 'Reception Invite',
   description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
   openGraph: {
     type: 'website',

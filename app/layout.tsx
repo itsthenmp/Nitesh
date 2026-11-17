@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 const shareImage = 'https://itsthenmp.github.io/Nitesh/photos/reception-share-v2.jpg';
 export const metadata: Metadata = {
-  title: 'Nitesh & Sudipta | Reception',
+  title: 'Reception Invite',
   description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
   icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/photos/ns-monogram-transparent.png` },
   openGraph: {
