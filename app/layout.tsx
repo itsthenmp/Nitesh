@@ -3,13 +3,13 @@ import './globals.css';
 const shareImage = 'https://itsthenmp.github.io/Nitesh/photos/reception-share-v2.jpg';
 export const metadata: Metadata = {
   title: 'Reception Invite',
-  description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
+  description: 'Come celebrate with Nitesh and Sudipta at their wedding reception.',
   icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/photos/ns-monogram-transparent.png` },
   openGraph: {
     type: 'website',
     url: 'https://itsthenmp.github.io/Nitesh/',
     title: 'Nitesh & Sudipta | Reception',
-    description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
+    description: 'Come celebrate with Nitesh and Sudipta at their wedding reception.',
     images: [{ url: shareImage, width: 1200, height: 627, type: 'image/jpeg', alt: 'Reception Invite in gold on a burgundy card' }],
   },
   twitter: { card: 'summary_large_image', images: [shareImage] },

@@ -6,12 +6,12 @@ const image = 'https://itsthenmp.github.io/Nitesh/photos/reception-share-v2.jpg'
 
 export const metadata: Metadata = {
   title: 'Reception Invite',
-  description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
+  description: 'Come celebrate with Nitesh and Sudipta at their wedding reception.',
   openGraph: {
     type: 'website',
     url,
     title: 'Nitesh & Sudipta | Reception Invite',
-    description: 'Join Nitesh and Sudipta for their reception on 17 February 2027.',
+    description: 'Come celebrate with Nitesh and Sudipta at their wedding reception.',
     images: [{ url: image, width: 1200, height: 627, type: 'image/jpeg', alt: 'Reception Invite in gold on a burgundy card' }],
   },
   twitter: { card: 'summary_large_image', images: [image] },
